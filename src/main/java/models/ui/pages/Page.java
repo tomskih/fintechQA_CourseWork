@@ -1,3 +1,5 @@
+package models.ui.pages;
+
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
@@ -7,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
-public class Page {
+public abstract class Page {
 
     public static class Header {
         public static SelenideElement header = Selenide.$(By.xpath("//div[@data-block-type='headerSlim']"));

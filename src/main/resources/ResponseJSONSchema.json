@@ -1,0 +1,3814 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "Date",
+    "PreviousDate",
+    "PreviousURL",
+    "Timestamp",
+    "Valute"
+  ],
+  "properties": {
+    "Date": {
+      "$id": "#/properties/Date",
+      "type": "string",
+      "title": "The Date Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-18T11:30:00+03:00"
+      ]
+    },
+    "PreviousDate": {
+      "$id": "#/properties/PreviousDate",
+      "type": "string",
+      "title": "The Previousdate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-17T11:30:00+03:00"
+      ]
+    },
+    "PreviousURL": {
+      "$id": "#/properties/PreviousURL",
+      "type": "string",
+      "title": "The Previousurl Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "//www.cbr-xml-daily.ru/archive/2020/04/17/daily_json.js"
+      ]
+    },
+    "Timestamp": {
+      "$id": "#/properties/Timestamp",
+      "type": "string",
+      "title": "The Timestamp Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-18T23:00:00+03:00"
+      ]
+    },
+    "Valute": {
+      "$id": "#/properties/Valute",
+      "type": "object",
+      "title": "The Valute Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "SGD": {
+            "Nominal": 1.0,
+            "NumCode": "702",
+            "Value": 51.9015,
+            "CharCode": "SGD",
+            "ID": "R01625",
+            "Name": "???????????? ??????",
+            "Previous": 52.3486
+          },
+          "HKD": {
+            "ID": "R01200",
+            "Name": "??????????? ????????",
+            "Previous": 96.3937,
+            "Nominal": 10.0,
+            "NumCode": "344",
+            "CharCode": "HKD",
+            "Value": 95.3994
+          },
+          "KRW": {
+            "ID": "R01815",
+            "Name": "??? ?????????? ?????",
+            "Previous": 60.9493,
+            "Nominal": 1000.0,
+            "NumCode": "410",
+            "Value": 60.7249,
+            "CharCode": "KRW"
+          },
+          "AUD": {
+            "Name": "????????????? ??????",
+            "Previous": 47.0386,
+            "Nominal": 1.0,
+            "NumCode": "036",
+            "CharCode": "AUD",
+            "Value": 46.7844,
+            "ID": "R01010"
+          },
+          "TMT": {
+            "Name": "????? ??????????? ?????",
+            "Previous": 21.3768,
+            "Nominal": 1.0,
+            "NumCode": "934",
+            "CharCode": "TMT",
+            "Value": 21.1571,
+            "ID": "R01710A"
+          },
+          "GBP": {
+            "Previous": 93.3301,
+            "Nominal": 1.0,
+            "NumCode": "826",
+            "Value": 92.0456,
+            "CharCode": "GBP",
+            "ID": "R01035",
+            "Name": "???? ?????????? ???????????? ???????????"
+          },
+          "KGS": {
+            "CharCode": "KGS",
+            "Value": 92.3906,
+            "ID": "R01370",
+            "Name": "?????????? ?????",
+            "Previous": 93.7245,
+            "Nominal": 100.0,
+            "NumCode": "417"
+          },
+          "CAD": {
+            "Name": "????????? ??????",
+            "Previous": 52.9421,
+            "Nominal": 1.0,
+            "NumCode": "124",
+            "CharCode": "CAD",
+            "Value": 52.4836,
+            "ID": "R01350"
+          },
+          "CZK": {
+            "ID": "R01760",
+            "Name": "??????? ????",
+            "Previous": 30.0054,
+            "Nominal": 10.0,
+            "NumCode": "203",
+            "Value": 29.4751,
+            "CharCode": "CZK"
+          },
+          "BRL": {
+            "Name": "??????????? ????",
+            "Previous": 14.2621,
+            "Nominal": 1.0,
+            "NumCode": "986",
+            "CharCode": "BRL",
+            "Value": 14.1274,
+            "ID": "R01115"
+          },
+          "UAH": {
+            "Previous": 27.4941,
+            "Nominal": 10.0,
+            "NumCode": "980",
+            "CharCode": "UAH",
+            "Value": 27.319,
+            "ID": "R01720",
+            "Name": "?????????? ??????"
+          },
+          "PLN": {
+            "Previous": 17.9402,
+            "Nominal": 1.0,
+            "NumCode": "985",
+            "CharCode": "PLN",
+            "Value": 17.6448,
+            "ID": "R01565",
+            "Name": "???????? ??????"
+          },
+          "RON": {
+            "Previous": 16.8088,
+            "Nominal": 1.0,
+            "NumCode": "946",
+            "Value": 16.5486,
+            "CharCode": "RON",
+            "ID": "R01585F",
+            "Name": "????????? ???"
+          },
+          "AMD": {
+            "Name": "????????? ??????",
+            "Previous": 15.4045,
+            "Nominal": 100.0,
+            "NumCode": "051",
+            "CharCode": "AMD",
+            "Value": 15.2604,
+            "ID": "R01060"
+          },
+          "ZAR": {
+            "ID": "R01810",
+            "Name": "??????????????? ??????",
+            "Previous": 40.1785,
+            "Nominal": 10.0,
+            "NumCode": "710",
+            "CharCode": "ZAR",
+            "Value": 39.2956
+          },
+          "UZS": {
+            "Previous": 73.8187,
+            "Nominal": 10000.0,
+            "NumCode": "860",
+            "CharCode": "UZS",
+            "Value": 72.9232,
+            "ID": "R01717",
+            "Name": "????????? ?????"
+          },
+          "JPY": {
+            "CharCode": "JPY",
+            "Value": 68.5588,
+            "ID": "R01820",
+            "Name": "???????? ???",
+            "Previous": 69.3285,
+            "Nominal": 100.0,
+            "NumCode": "392"
+          },
+          "BGN": {
+            "Value": 41.0869,
+            "CharCode": "BGN",
+            "ID": "R01100",
+            "Name": "?????????? ???",
+            "Previous": 41.5643,
+            "Nominal": 1.0,
+            "NumCode": "975"
+          },
+          "MDL": {
+            "Value": 41.6586,
+            "CharCode": "MDL",
+            "ID": "R01500",
+            "Name": "?????????? ????",
+            "Previous": 42.1387,
+            "Nominal": 10.0,
+            "NumCode": "498"
+          },
+          "DKK": {
+            "Name": "??????? ?????",
+            "Previous": 10.8951,
+            "Nominal": 1.0,
+            "NumCode": "208",
+            "Value": 10.7308,
+            "CharCode": "DKK",
+            "ID": "R01215"
+          },
+          "TRY": {
+            "ID": "R01700J",
+            "Name": "???????? ????",
+            "Previous": 10.8067,
+            "Nominal": 1.0,
+            "NumCode": "949",
+            "Value": 10.6413,
+            "CharCode": "TRY"
+          },
+          "AZN": {
+            "ID": "R01020A",
+            "Name": "??????????????? ?????",
+            "Previous": 44.0388,
+            "Nominal": 1.0,
+            "NumCode": "944",
+            "Value": 43.5863,
+            "CharCode": "AZN"
+          },
+          "KZT": {
+            "Value": 17.3283,
+            "CharCode": "KZT",
+            "ID": "R01335",
+            "Name": "????????????? ?????",
+            "Previous": 17.451,
+            "Nominal": 100.0,
+            "NumCode": "398"
+          },
+          "CNY": {
+            "CharCode": "CNY",
+            "Value": 10.4488,
+            "ID": "R01375",
+            "Name": "????????? ????",
+            "Previous": 10.5615,
+            "Nominal": 1.0,
+            "NumCode": "156"
+          },
+          "USD": {
+            "CharCode": "USD",
+            "Value": 73.9441,
+            "ID": "R01235",
+            "Name": "?????? ???",
+            "Previous": 74.7119,
+            "Nominal": 1.0,
+            "NumCode": "840"
+          },
+          "NOK": {
+            "Previous": 71.1508,
+            "Nominal": 10.0,
+            "NumCode": "578",
+            "CharCode": "NOK",
+            "Value": 70.4773,
+            "ID": "R01535",
+            "Name": "?????????? ????"
+          },
+          "HUF": {
+            "CharCode": "HUF",
+            "Value": 22.8554,
+            "ID": "R01135",
+            "Name": "?????????? ????????",
+            "Previous": 23.1396,
+            "Nominal": 100.0,
+            "NumCode": "348"
+          },
+          "EUR": {
+            "Previous": 81.2791,
+            "Nominal": 1.0,
+            "NumCode": "978",
+            "Value": 80.111,
+            "CharCode": "EUR",
+            "ID": "R01239",
+            "Name": "????"
+          },
+          "INR": {
+            "Name": "????????? ?????",
+            "Previous": 97.1767,
+            "Nominal": 100.0,
+            "NumCode": "356",
+            "CharCode": "INR",
+            "Value": 96.7804,
+            "ID": "R01270"
+          },
+          "CHF": {
+            "Previous": 77.2775,
+            "Nominal": 1.0,
+            "NumCode": "756",
+            "CharCode": "CHF",
+            "Value": 76.1212,
+            "ID": "R01775",
+            "Name": "??????????? ?????"
+          },
+          "TJS": {
+            "Nominal": 10.0,
+            "NumCode": "972",
+            "Value": 72.1758,
+            "CharCode": "TJS",
+            "ID": "R01670",
+            "Name": "?????????? ??????",
+            "Previous": 72.9074
+          },
+          "BYN": {
+            "ID": "R01090B",
+            "Name": "??????????? ?????",
+            "Previous": 30.4636,
+            "Nominal": 1.0,
+            "NumCode": "933",
+            "CharCode": "BYN",
+            "Value": 30.2677
+          },
+          "XDR": {
+            "Name": "??? (??????????? ????? ?????????????)",
+            "Previous": 102.102,
+            "Nominal": 1.0,
+            "NumCode": "960",
+            "Value": 100.9226,
+            "CharCode": "XDR",
+            "ID": "R01589"
+          },
+          "SEK": {
+            "CharCode": "SEK",
+            "Value": 73.6319,
+            "ID": "R01770",
+            "Name": "???????? ????",
+            "Previous": 74.3802,
+            "Nominal": 10.0,
+            "NumCode": "752"
+          }
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "AUD",
+        "AZN",
+        "GBP",
+        "AMD",
+        "BYN",
+        "BGN",
+        "BRL",
+        "HUF",
+        "HKD",
+        "DKK",
+        "USD",
+        "EUR",
+        "INR",
+        "KZT",
+        "CAD",
+        "KGS",
+        "CNY",
+        "MDL",
+        "NOK",
+        "PLN",
+        "RON",
+        "XDR",
+        "SGD",
+        "TJS",
+        "TRY",
+        "TMT",
+        "UZS",
+        "UAH",
+        "CZK",
+        "SEK",
+        "CHF",
+        "ZAR",
+        "KRW",
+        "JPY"
+      ],
+      "properties": {
+        "AUD": {
+          "$id": "#/properties/Valute/properties/AUD",
+          "type": "object",
+          "title": "The Aud Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "CharCode": "AUD",
+              "Value": 46.7844,
+              "ID": "R01010",
+              "Name": "????????????? ??????",
+              "Previous": 47.0386,
+              "Nominal": 1.0,
+              "NumCode": "036"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/AUD/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01010"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/AUD/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "036"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/AUD/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "AUD"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/AUD/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/AUD/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "????????????? ??????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/AUD/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                46.7844
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/AUD/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                47.0386
+              ]
+            }
+          }
+        },
+        "AZN": {
+          "$id": "#/properties/Valute/properties/AZN",
+          "type": "object",
+          "title": "The Azn Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "ID": "R01020A",
+              "Name": "??????????????? ?????",
+              "Previous": 44.0388,
+              "Nominal": 1.0,
+              "NumCode": "944",
+              "CharCode": "AZN",
+              "Value": 43.5863
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/AZN/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01020A"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/AZN/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "944"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/AZN/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "AZN"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/AZN/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/AZN/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "??????????????? ?????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/AZN/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                43.5863
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/AZN/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                44.0388
+              ]
+            }
+          }
+        },
+        "GBP": {
+          "$id": "#/properties/Valute/properties/GBP",
+          "type": "object",
+          "title": "The Gbp Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "ID": "R01035",
+              "Name": "???? ?????????? ???????????? ???????????",
+              "Previous": 93.3301,
+              "Nominal": 1.0,
+              "NumCode": "826",
+              "Value": 92.0456,
+              "CharCode": "GBP"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/GBP/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01035"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/GBP/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "826"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/GBP/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "GBP"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/GBP/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/GBP/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "???? ?????????? ???????????? ???????????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/GBP/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                92.0456
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/GBP/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                93.3301
+              ]
+            }
+          }
+        },
+        "AMD": {
+          "$id": "#/properties/Valute/properties/AMD",
+          "type": "object",
+          "title": "The Amd Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "NumCode": "051",
+              "CharCode": "AMD",
+              "Value": 15.2604,
+              "ID": "R01060",
+              "Name": "????????? ??????",
+              "Previous": 15.4045,
+              "Nominal": 100.0
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/AMD/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01060"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/AMD/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "051"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/AMD/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "AMD"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/AMD/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                100.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/AMD/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "????????? ??????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/AMD/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                15.2604
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/AMD/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                15.4045
+              ]
+            }
+          }
+        },
+        "BYN": {
+          "$id": "#/properties/Valute/properties/BYN",
+          "type": "object",
+          "title": "The Byn Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Previous": 30.4636,
+              "Nominal": 1.0,
+              "NumCode": "933",
+              "Value": 30.2677,
+              "CharCode": "BYN",
+              "ID": "R01090B",
+              "Name": "??????????? ?????"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/BYN/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01090B"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/BYN/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "933"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/BYN/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "BYN"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/BYN/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/BYN/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "??????????? ?????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/BYN/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                30.2677
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/BYN/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                30.4636
+              ]
+            }
+          }
+        },
+        "BGN": {
+          "$id": "#/properties/Valute/properties/BGN",
+          "type": "object",
+          "title": "The Bgn Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "CharCode": "BGN",
+              "Value": 41.0869,
+              "ID": "R01100",
+              "Name": "?????????? ???",
+              "Previous": 41.5643,
+              "Nominal": 1.0,
+              "NumCode": "975"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/BGN/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01100"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/BGN/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "975"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/BGN/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "BGN"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/BGN/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/BGN/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "?????????? ???"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/BGN/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                41.0869
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/BGN/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                41.5643
+              ]
+            }
+          }
+        },
+        "BRL": {
+          "$id": "#/properties/Valute/properties/BRL",
+          "type": "object",
+          "title": "The Brl Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Value": 14.1274,
+              "CharCode": "BRL",
+              "ID": "R01115",
+              "Name": "??????????? ????",
+              "Previous": 14.2621,
+              "Nominal": 1.0,
+              "NumCode": "986"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/BRL/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01115"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/BRL/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "986"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/BRL/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "BRL"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/BRL/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/BRL/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "??????????? ????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/BRL/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                14.1274
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/BRL/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                14.2621
+              ]
+            }
+          }
+        },
+        "HUF": {
+          "$id": "#/properties/Valute/properties/HUF",
+          "type": "object",
+          "title": "The Huf Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Previous": 23.1396,
+              "Nominal": 100.0,
+              "NumCode": "348",
+              "Value": 22.8554,
+              "CharCode": "HUF",
+              "ID": "R01135",
+              "Name": "?????????? ????????"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/HUF/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01135"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/HUF/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "348"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/HUF/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "HUF"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/HUF/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                100.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/HUF/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "?????????? ????????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/HUF/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                22.8554
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/HUF/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                23.1396
+              ]
+            }
+          }
+        },
+        "HKD": {
+          "$id": "#/properties/Valute/properties/HKD",
+          "type": "object",
+          "title": "The Hkd Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "ID": "R01200",
+              "Name": "??????????? ????????",
+              "Previous": 96.3937,
+              "Nominal": 10.0,
+              "NumCode": "344",
+              "Value": 95.3994,
+              "CharCode": "HKD"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/HKD/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01200"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/HKD/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "344"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/HKD/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "HKD"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/HKD/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/HKD/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "??????????? ????????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/HKD/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                95.3994
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/HKD/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                96.3937
+              ]
+            }
+          }
+        },
+        "DKK": {
+          "$id": "#/properties/Valute/properties/DKK",
+          "type": "object",
+          "title": "The Dkk Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Name": "??????? ?????",
+              "Previous": 10.8951,
+              "Nominal": 1.0,
+              "NumCode": "208",
+              "CharCode": "DKK",
+              "Value": 10.7308,
+              "ID": "R01215"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/DKK/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01215"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/DKK/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "208"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/DKK/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "DKK"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/DKK/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/DKK/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "??????? ?????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/DKK/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.7308
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/DKK/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.8951
+              ]
+            }
+          }
+        },
+        "USD": {
+          "$id": "#/properties/Valute/properties/USD",
+          "type": "object",
+          "title": "The Usd Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Previous": 74.7119,
+              "Nominal": 1.0,
+              "NumCode": "840",
+              "CharCode": "USD",
+              "Value": 73.9441,
+              "ID": "R01235",
+              "Name": "?????? ???"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/USD/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01235"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/USD/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "840"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/USD/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "USD"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/USD/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/USD/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "?????? ???"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/USD/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                73.9441
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/USD/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                74.7119
+              ]
+            }
+          }
+        },
+        "EUR": {
+          "$id": "#/properties/Valute/properties/EUR",
+          "type": "object",
+          "title": "The Eur Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Name": "????",
+              "Previous": 81.2791,
+              "Nominal": 1.0,
+              "NumCode": "978",
+              "CharCode": "EUR",
+              "Value": 80.111,
+              "ID": "R01239"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/EUR/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01239"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/EUR/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "978"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/EUR/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "EUR"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/EUR/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/EUR/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/EUR/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                80.111
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/EUR/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                81.2791
+              ]
+            }
+          }
+        },
+        "INR": {
+          "$id": "#/properties/Valute/properties/INR",
+          "type": "object",
+          "title": "The Inr Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "ID": "R01270",
+              "Name": "????????? ?????",
+              "Previous": 97.1767,
+              "Nominal": 100.0,
+              "NumCode": "356",
+              "Value": 96.7804,
+              "CharCode": "INR"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/INR/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01270"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/INR/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "356"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/INR/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "INR"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/INR/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                100.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/INR/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "????????? ?????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/INR/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                96.7804
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/INR/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                97.1767
+              ]
+            }
+          }
+        },
+        "KZT": {
+          "$id": "#/properties/Valute/properties/KZT",
+          "type": "object",
+          "title": "The Kzt Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "CharCode": "KZT",
+              "Value": 17.3283,
+              "ID": "R01335",
+              "Name": "????????????? ?????",
+              "Previous": 17.451,
+              "Nominal": 100.0,
+              "NumCode": "398"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/KZT/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01335"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/KZT/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "398"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/KZT/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "KZT"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/KZT/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                100.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/KZT/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "????????????? ?????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/KZT/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                17.3283
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/KZT/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                17.451
+              ]
+            }
+          }
+        },
+        "CAD": {
+          "$id": "#/properties/Valute/properties/CAD",
+          "type": "object",
+          "title": "The Cad Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "ID": "R01350",
+              "Name": "????????? ??????",
+              "Previous": 52.9421,
+              "Nominal": 1.0,
+              "NumCode": "124",
+              "Value": 52.4836,
+              "CharCode": "CAD"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/CAD/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01350"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/CAD/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "124"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/CAD/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "CAD"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/CAD/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/CAD/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "????????? ??????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/CAD/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                52.4836
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/CAD/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                52.9421
+              ]
+            }
+          }
+        },
+        "KGS": {
+          "$id": "#/properties/Valute/properties/KGS",
+          "type": "object",
+          "title": "The Kgs Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "ID": "R01370",
+              "Name": "?????????? ?????",
+              "Previous": 93.7245,
+              "Nominal": 100.0,
+              "NumCode": "417",
+              "CharCode": "KGS",
+              "Value": 92.3906
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/KGS/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01370"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/KGS/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "417"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/KGS/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "KGS"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/KGS/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                100.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/KGS/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "?????????? ?????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/KGS/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                92.3906
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/KGS/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                93.7245
+              ]
+            }
+          }
+        },
+        "CNY": {
+          "$id": "#/properties/Valute/properties/CNY",
+          "type": "object",
+          "title": "The Cny Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Name": "????????? ????",
+              "Previous": 10.5615,
+              "Nominal": 1.0,
+              "NumCode": "156",
+              "Value": 10.4488,
+              "CharCode": "CNY",
+              "ID": "R01375"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/CNY/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01375"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/CNY/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "156"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/CNY/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "CNY"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/CNY/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/CNY/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "????????? ????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/CNY/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.4488
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/CNY/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.5615
+              ]
+            }
+          }
+        },
+        "MDL": {
+          "$id": "#/properties/Valute/properties/MDL",
+          "type": "object",
+          "title": "The Mdl Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Name": "?????????? ????",
+              "Previous": 42.1387,
+              "Nominal": 10.0,
+              "NumCode": "498",
+              "Value": 41.6586,
+              "CharCode": "MDL",
+              "ID": "R01500"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/MDL/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01500"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/MDL/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "498"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/MDL/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "MDL"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/MDL/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/MDL/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "?????????? ????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/MDL/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                41.6586
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/MDL/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                42.1387
+              ]
+            }
+          }
+        },
+        "NOK": {
+          "$id": "#/properties/Valute/properties/NOK",
+          "type": "object",
+          "title": "The Nok Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "ID": "R01535",
+              "Name": "?????????? ????",
+              "Previous": 71.1508,
+              "Nominal": 10.0,
+              "NumCode": "578",
+              "CharCode": "NOK",
+              "Value": 70.4773
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/NOK/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01535"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/NOK/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "578"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/NOK/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "NOK"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/NOK/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/NOK/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "?????????? ????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/NOK/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                70.4773
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/NOK/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                71.1508
+              ]
+            }
+          }
+        },
+        "PLN": {
+          "$id": "#/properties/Valute/properties/PLN",
+          "type": "object",
+          "title": "The Pln Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Previous": 17.9402,
+              "Nominal": 1.0,
+              "NumCode": "985",
+              "Value": 17.6448,
+              "CharCode": "PLN",
+              "ID": "R01565",
+              "Name": "???????? ??????"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/PLN/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01565"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/PLN/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "985"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/PLN/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "PLN"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/PLN/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/PLN/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "???????? ??????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/PLN/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                17.6448
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/PLN/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                17.9402
+              ]
+            }
+          }
+        },
+        "RON": {
+          "$id": "#/properties/Valute/properties/RON",
+          "type": "object",
+          "title": "The Ron Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "ID": "R01585F",
+              "Name": "????????? ???",
+              "Previous": 16.8088,
+              "Nominal": 1.0,
+              "NumCode": "946",
+              "CharCode": "RON",
+              "Value": 16.5486
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/RON/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01585F"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/RON/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "946"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/RON/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "RON"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/RON/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/RON/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "????????? ???"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/RON/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                16.5486
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/RON/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                16.8088
+              ]
+            }
+          }
+        },
+        "XDR": {
+          "$id": "#/properties/Valute/properties/XDR",
+          "type": "object",
+          "title": "The Xdr Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Value": 100.9226,
+              "CharCode": "XDR",
+              "ID": "R01589",
+              "Name": "??? (??????????? ????? ?????????????)",
+              "Previous": 102.102,
+              "Nominal": 1.0,
+              "NumCode": "960"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/XDR/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01589"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/XDR/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "960"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/XDR/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "XDR"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/XDR/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/XDR/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "??? (??????????? ????? ?????????????)"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/XDR/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                100.9226
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/XDR/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                102.102
+              ]
+            }
+          }
+        },
+        "SGD": {
+          "$id": "#/properties/Valute/properties/SGD",
+          "type": "object",
+          "title": "The Sgd Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "ID": "R01625",
+              "Name": "???????????? ??????",
+              "Previous": 52.3486,
+              "Nominal": 1.0,
+              "NumCode": "702",
+              "Value": 51.9015,
+              "CharCode": "SGD"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/SGD/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01625"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/SGD/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "702"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/SGD/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "SGD"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/SGD/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/SGD/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "???????????? ??????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/SGD/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                51.9015
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/SGD/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                52.3486
+              ]
+            }
+          }
+        },
+        "TJS": {
+          "$id": "#/properties/Valute/properties/TJS",
+          "type": "object",
+          "title": "The Tjs Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Previous": 72.9074,
+              "Nominal": 10.0,
+              "NumCode": "972",
+              "Value": 72.1758,
+              "CharCode": "TJS",
+              "ID": "R01670",
+              "Name": "?????????? ??????"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/TJS/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01670"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/TJS/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "972"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/TJS/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "TJS"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/TJS/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/TJS/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "?????????? ??????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/TJS/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                72.1758
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/TJS/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                72.9074
+              ]
+            }
+          }
+        },
+        "TRY": {
+          "$id": "#/properties/Valute/properties/TRY",
+          "type": "object",
+          "title": "The Try Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Previous": 10.8067,
+              "Nominal": 1.0,
+              "NumCode": "949",
+              "CharCode": "TRY",
+              "Value": 10.6413,
+              "ID": "R01700J",
+              "Name": "???????? ????"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/TRY/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01700J"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/TRY/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "949"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/TRY/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "TRY"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/TRY/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/TRY/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "???????? ????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/TRY/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.6413
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/TRY/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.8067
+              ]
+            }
+          }
+        },
+        "TMT": {
+          "$id": "#/properties/Valute/properties/TMT",
+          "type": "object",
+          "title": "The Tmt Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Name": "????? ??????????? ?????",
+              "Previous": 21.3768,
+              "Nominal": 1.0,
+              "NumCode": "934",
+              "CharCode": "TMT",
+              "Value": 21.1571,
+              "ID": "R01710A"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/TMT/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01710A"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/TMT/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "934"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/TMT/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "TMT"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/TMT/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/TMT/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "????? ??????????? ?????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/TMT/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                21.1571
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/TMT/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                21.3768
+              ]
+            }
+          }
+        },
+        "UZS": {
+          "$id": "#/properties/Valute/properties/UZS",
+          "type": "object",
+          "title": "The Uzs Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Previous": 73.8187,
+              "Nominal": 10000.0,
+              "NumCode": "860",
+              "CharCode": "UZS",
+              "Value": 72.9232,
+              "ID": "R01717",
+              "Name": "????????? ?????"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/UZS/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01717"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/UZS/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "860"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/UZS/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "UZS"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/UZS/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10000.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/UZS/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "????????? ?????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/UZS/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                72.9232
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/UZS/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                73.8187
+              ]
+            }
+          }
+        },
+        "UAH": {
+          "$id": "#/properties/Valute/properties/UAH",
+          "type": "object",
+          "title": "The Uah Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Name": "?????????? ??????",
+              "Previous": 27.4941,
+              "Nominal": 10.0,
+              "NumCode": "980",
+              "CharCode": "UAH",
+              "Value": 27.319,
+              "ID": "R01720"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/UAH/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01720"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/UAH/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "980"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/UAH/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "UAH"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/UAH/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/UAH/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "?????????? ??????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/UAH/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                27.319
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/UAH/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                27.4941
+              ]
+            }
+          }
+        },
+        "CZK": {
+          "$id": "#/properties/Valute/properties/CZK",
+          "type": "object",
+          "title": "The Czk Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Name": "??????? ????",
+              "Previous": 30.0054,
+              "Nominal": 10.0,
+              "NumCode": "203",
+              "Value": 29.4751,
+              "CharCode": "CZK",
+              "ID": "R01760"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/CZK/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01760"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/CZK/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "203"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/CZK/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "CZK"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/CZK/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/CZK/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "??????? ????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/CZK/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                29.4751
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/CZK/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                30.0054
+              ]
+            }
+          }
+        },
+        "SEK": {
+          "$id": "#/properties/Valute/properties/SEK",
+          "type": "object",
+          "title": "The Sek Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "CharCode": "SEK",
+              "Value": 73.6319,
+              "ID": "R01770",
+              "Name": "???????? ????",
+              "Previous": 74.3802,
+              "Nominal": 10.0,
+              "NumCode": "752"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/SEK/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01770"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/SEK/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "752"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/SEK/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "SEK"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/SEK/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/SEK/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "???????? ????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/SEK/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                73.6319
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/SEK/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                74.3802
+              ]
+            }
+          }
+        },
+        "CHF": {
+          "$id": "#/properties/Valute/properties/CHF",
+          "type": "object",
+          "title": "The Chf Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Nominal": 1.0,
+              "NumCode": "756",
+              "CharCode": "CHF",
+              "Value": 76.1212,
+              "ID": "R01775",
+              "Name": "??????????? ?????",
+              "Previous": 77.2775
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/CHF/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01775"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/CHF/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "756"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/CHF/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "CHF"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/CHF/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/CHF/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "??????????? ?????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/CHF/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                76.1212
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/CHF/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                77.2775
+              ]
+            }
+          }
+        },
+        "ZAR": {
+          "$id": "#/properties/Valute/properties/ZAR",
+          "type": "object",
+          "title": "The Zar Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "Previous": 40.1785,
+              "Nominal": 10.0,
+              "NumCode": "710",
+              "Value": 39.2956,
+              "CharCode": "ZAR",
+              "ID": "R01810",
+              "Name": "??????????????? ??????"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/ZAR/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01810"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/ZAR/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "710"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/ZAR/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "ZAR"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/ZAR/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                10.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/ZAR/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "??????????????? ??????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/ZAR/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                39.2956
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/ZAR/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                40.1785
+              ]
+            }
+          }
+        },
+        "KRW": {
+          "$id": "#/properties/Valute/properties/KRW",
+          "type": "object",
+          "title": "The Krw Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "ID": "R01815",
+              "Name": "??? ?????????? ?????",
+              "Previous": 60.9493,
+              "Nominal": 1000.0,
+              "NumCode": "410",
+              "Value": 60.7249,
+              "CharCode": "KRW"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/KRW/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01815"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/KRW/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "410"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/KRW/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "KRW"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/KRW/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1000.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/KRW/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "??? ?????????? ?????"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/KRW/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                60.7249
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/KRW/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                60.9493
+              ]
+            }
+          }
+        },
+        "JPY": {
+          "$id": "#/properties/Valute/properties/JPY",
+          "type": "object",
+          "title": "The Jpy Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "ID": "R01820",
+              "Name": "???????? ???",
+              "Previous": 69.3285,
+              "Nominal": 100.0,
+              "NumCode": "392",
+              "Value": 68.5588,
+              "CharCode": "JPY"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "ID",
+            "NumCode",
+            "CharCode",
+            "Nominal",
+            "Name",
+            "Value",
+            "Previous"
+          ],
+          "properties": {
+            "ID": {
+              "$id": "#/properties/Valute/properties/JPY/properties/ID",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "R01820"
+              ]
+            },
+            "NumCode": {
+              "$id": "#/properties/Valute/properties/JPY/properties/NumCode",
+              "type": "string",
+              "title": "The Numcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "392"
+              ]
+            },
+            "CharCode": {
+              "$id": "#/properties/Valute/properties/JPY/properties/CharCode",
+              "type": "string",
+              "title": "The Charcode Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "JPY"
+              ]
+            },
+            "Nominal": {
+              "$id": "#/properties/Valute/properties/JPY/properties/Nominal",
+              "type": "integer",
+              "title": "The Nominal Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                100.0
+              ]
+            },
+            "Name": {
+              "$id": "#/properties/Valute/properties/JPY/properties/Name",
+              "type": "string",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "???????? ???"
+              ]
+            },
+            "Value": {
+              "$id": "#/properties/Valute/properties/JPY/properties/Value",
+              "type": "number",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                68.5588
+              ]
+            },
+            "Previous": {
+              "$id": "#/properties/Valute/properties/JPY/properties/Previous",
+              "type": "number",
+              "title": "The Previous Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                69.3285
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

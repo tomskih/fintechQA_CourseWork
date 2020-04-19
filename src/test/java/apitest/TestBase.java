@@ -24,13 +24,17 @@ public class TestBase {
         //Rest Assured config
         RestAssured.baseURI = props.getProperty(baseURI);
         //basic request setting
-        requestSpecification = RestAssured.given().contentType(ContentType.JSON);
+        requestSpecification = RestAssured.given().log().body()
+                .contentType(ContentType.JSON);
     }
 
     protected ValidatableResponse getWith200Status(String endPoint) {
         return requestSpecification
                 .get(endPoint)
                 .then()
-                .statusCode(HttpStatus.SC_OK);
+                .statusCode(HttpStatus.SC_OK)
+                .header("content-type", "application/javascript; charset=utf-8");
+
     }
+
 }

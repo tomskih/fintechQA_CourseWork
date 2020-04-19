@@ -1,19 +1,12 @@
+package uitest;
+
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
-import com.sun.jndi.toolkit.url.Uri;
-import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-
-import java.net.MalformedURLException;
-
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import models.ui.pages.ExchangePage;
+import models.ui.pages.Page;
 
 public class ExchangeTest {
     ExchangePage exchangePage = new ExchangePage();
@@ -26,8 +19,6 @@ public class ExchangeTest {
 //        ChromeDriverManager.getInstance().setup();
         Configuration.baseUrl = "https://www.tinkoff.ru";
         ExchangePage exchangePage = new ExchangePage();
-
-    //1. Перейти на https://www.tinkoff.ru/about/exchange/ (страница курса валют в tinkoff.ru)
         exchangePage.open();
     }
 
@@ -58,6 +49,12 @@ public class ExchangeTest {
     public void checkFooterLinks() {
         footer.links.get(0).shouldBe(Condition.visible);
         System.out.println(footer.links.size());
+    }
+
+    @Test
+    public void checkDefaultCurrencySelect() {
+        System.out.println(exchangePage.CurrencySelect);
+        System.out.println(exchangePage.CurrencySelect.size());
     }
 
 
