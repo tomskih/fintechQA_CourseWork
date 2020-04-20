@@ -2,11 +2,11 @@ package uitest;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import models.ui.pages.ExchangePage;
+import models.ui.pages.Page;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import models.ui.pages.ExchangePage;
-import models.ui.pages.Page;
 
 public class ExchangeTest {
     ExchangePage exchangePage = new ExchangePage();
@@ -22,26 +22,26 @@ public class ExchangeTest {
         exchangePage.open();
     }
 
-   @Test
+    @Test
     public void isExistsPageElements() {
         int i = 0;
         exchangePage.isExistElement(Page.Header.header);
         exchangePage.isExistElement(Page.Header.logo);
-         while (i < header.links.size()) {   //просто прокликиваем по всем видимым ссылкам и проверяем наличие хедера
+        while (i < header.links.size()) {   //?????? ???????????? ?? ???? ??????? ??????? ? ????????? ??????? ??????
             header.links.get(i).click();
             Page.Header.header.shouldBe(Condition.exist);
             exchangePage.back();
             i++;
         }
-        //нужно ещё прокликать скрытые
-        //разобраться с chromedriver и mouseMove
-       // System.out.println(exchangePage.headerHiddenLinks);
-       // exchangePage.moveToElement(exchangePage.headerAdditionalMenu);
+        //????? ??? ?????????? ???????
+        //??????????? ? chromedriver ? mouseMove
+        // System.out.println(exchangePage.headerHiddenLinks);
+        // exchangePage.moveToElement(exchangePage.headerAdditionalMenu);
     }
 
 
     @Test
-    public void checkActiveLinkIsHighlighted() { //4. Проверить, что выделен раздел "Курсы валют"
+    public void checkActiveLinkIsHighlighted() { //4. ?????????, ??? ??????? ?????? "????? ?????"
         Assert.assertTrue(exchangePage.isActive(header.highlightedLink));
     }
 
@@ -53,9 +53,39 @@ public class ExchangeTest {
 
     @Test
     public void checkDefaultCurrencySelect() {
-        System.out.println(exchangePage.CurrencySelect);
-        System.out.println(exchangePage.CurrencySelect.size());
+        String LeftSelect = exchangePage.currencySelect.get(0).getText();
+        String RightSelect = exchangePage.currencySelect.get(1).getText();
+        String sellRateTitle = exchangePage.operationCurrenciesAndType.get(0).getText();
+        String buyRateTitle = exchangePage.operationCurrenciesAndType.get(1).getText();
+
+        Assert.assertEquals(LeftSelect, "Рубль");
+        Assert.assertEquals(RightSelect, "Евро");
+
+        Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(sellRateTitle, LeftSelect));
+        Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(buyRateTitle, LeftSelect));
+        Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(sellRateTitle, RightSelect));
+        Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(buyRateTitle, RightSelect));
     }
+
+    @Test
+    public void checkCurrencyOnPage() {
+        exchangePage.getRatesOnPage();
+    }
+
+//    @Test
+//    public void checkNewCurrencySelect() {
+//        System.out.println(exchangePage.currencySelect.get(0).getText());
+//        exchangePage.currencySelect
+//                .get(0)
+//                .click();
+//        $(By.xpath(".//div[2]/div[3]/div/div")).click();
+//
+//        System.out.println(exchangePage.currencySelect.get(0).getText());
+//
+//        ;
+
+
+ //   }
 
 
 }

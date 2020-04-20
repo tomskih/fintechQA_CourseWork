@@ -67,6 +67,20 @@ public class CBRTest extends TestBase {
         // Date parsedDate = dateFormat.parse(responseDate);
     }
 
+//    @Step("Сравниваем курсы на странице с курсами ЦБ")
+//    public void compareRates() {
+//        ExchangePage exchangePage = new ExchangePage();
+//        int i = 0;
+//
+//        while (i < exchangePage.ratesOnPage.size()) {
+//
+//            String stringRate = (ratesOnPage.get(i).getText()).replace(",", ".");
+//            getRatesOnPage.add(Double.parseDouble(stringRate));
+//            i++;
+//        }
+//
+//    }
+
 
     @Attachment
     public String getJsonResponseBody(ValidatableResponse response) {
