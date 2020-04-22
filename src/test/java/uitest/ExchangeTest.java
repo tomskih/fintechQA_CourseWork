@@ -47,8 +47,8 @@ public class ExchangeTest extends TestBase{
     }
 
     @Test
-    @DisplayName("UI-тесты")
-    @Description("Все ui-тесты")
+    @DisplayName("UI-С‚РµСЃС‚С‹")
+    @Description("Р’СЃРµ ui-С‚РµСЃС‚С‹")
     public void ExchangeTest() throws IOException {
         openPage();
         isPageLoad();
@@ -59,19 +59,19 @@ public class ExchangeTest extends TestBase{
         checkCurrencyOnPage();
     }
 
-    @Step ("1. Перейти на https://www.tinkoff.ru/about/exchange/ (страница курса валют в tinkoff.ru")
+    @Step ("1. РџРµСЂРµР№С‚Рё РЅР° https://www.tinkoff.ru/about/exchange/ (СЃС‚СЂР°РЅРёС†Р° РєСѓСЂСЃР° РІР°Р»СЋС‚ РІ tinkoff.ru")
     public void openPage() {
         exchangePage.open();
     }
-    @Step ("2. Проверить, что страница действительно загрузилась")
+    @Step ("2. РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ СЃС‚СЂР°РЅРёС†Р° РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ Р·Р°РіСЂСѓР·РёР»Р°СЃСЊ")
     public void isPageLoad()  {
         RestAssured.when()
                 .get(Configuration.baseUrl)
                 .then().assertThat().statusCode(SC_OK);
     }
 
-    @Step ("3. Проверить, что загрузился хэдер со всеми основными элементами. Здесь же проверить доступность всех ссылок")
-    @Description("Проверяем, что есть хедер, лого, ссылки, и проверяем что ссылки рабочие")
+    @Step ("3. РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ Р·Р°РіСЂСѓР·РёР»СЃСЏ С…СЌРґРµСЂ СЃРѕ РІСЃРµРјРё РѕСЃРЅРѕРІРЅС‹РјРё СЌР»РµРјРµРЅС‚Р°РјРё. Р—РґРµСЃСЊ Р¶Рµ РїСЂРѕРІРµСЂРёС‚СЊ РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ РІСЃРµС… СЃСЃС‹Р»РѕРє")
+    @Description("РџСЂРѕРІРµСЂСЏРµРј, С‡С‚Рѕ РµСЃС‚СЊ С…РµРґРµСЂ, Р»РѕРіРѕ, СЃСЃС‹Р»РєРё, Рё РїСЂРѕРІРµСЂСЏРµРј С‡С‚Рѕ СЃСЃС‹Р»РєРё СЂР°Р±РѕС‡РёРµ")
     public void isExistsPageElements() {
         int i = 0;
         exchangePage.isExistElement(Page.Header.header);
@@ -86,12 +86,12 @@ public class ExchangeTest extends TestBase{
     }
 
 
-    @Step ("4. Проверить, что выделен раздел 'Курсы валют'")
+    @Step ("4. РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ РІС‹РґРµР»РµРЅ СЂР°Р·РґРµР» 'РљСѓСЂСЃС‹ РІР°Р»СЋС‚'")
     public void checkActiveLinkIsHighlighted() {
         Assert.assertTrue(exchangePage.isActive(header.highlightedLink));
     }
 
-    @Step ("5. Проверить, что корректно отображается футер со всеми основными элементами. Здесь же проверить доступность ссылок")
+    @Step ("5. РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ РєРѕСЂСЂРµРєС‚РЅРѕ РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ С„СѓС‚РµСЂ СЃРѕ РІСЃРµРјРё РѕСЃРЅРѕРІРЅС‹РјРё СЌР»РµРјРµРЅС‚Р°РјРё. Р—РґРµСЃСЊ Р¶Рµ РїСЂРѕРІРµСЂРёС‚СЊ РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ СЃСЃС‹Р»РѕРє")
     public void checkFooterLinks() {
         int i = 0;
         footer.links.get(0).shouldBe(Condition.visible);
@@ -106,15 +106,15 @@ public class ExchangeTest extends TestBase{
         }
     }
 
-    @Step ("6. Проверить, что по умолчанию в селекторах выбора валют выставлены Рубль-->Евро соотвественно, а в таблице курс Евро к Рублю")
+    @Step ("6. РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РІ СЃРµР»РµРєС‚РѕСЂР°С… РІС‹Р±РѕСЂР° РІР°Р»СЋС‚ РІС‹СЃС‚Р°РІР»РµРЅС‹ Р СѓР±Р»СЊ-->Р•РІСЂРѕ СЃРѕРѕС‚РІРµСЃС‚РІРµРЅРЅРѕ, Р° РІ С‚Р°Р±Р»РёС†Рµ РєСѓСЂСЃ Р•РІСЂРѕ Рє Р СѓР±Р»СЋ")
     public void checkDefaultCurrencySelect() {
         String LeftSelect = exchangePage.currencySelect.get(0).getText();
         String RightSelect = exchangePage.currencySelect.get(1).getText();
         String sellRateTitle = exchangePage.operationCurrenciesAndType.get(1).getText();
         String buyRateTitle = exchangePage.operationCurrenciesAndType.get(2).getText();
 
-        Assert.assertEquals(LeftSelect, "Рубль");
-        Assert.assertEquals(RightSelect, "Евро");
+        Assert.assertEquals(LeftSelect, "Р СѓР±Р»СЊ");
+        Assert.assertEquals(RightSelect, "Р•РІСЂРѕ");
 
         Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(sellRateTitle, LeftSelect));
         Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(buyRateTitle, LeftSelect));
@@ -143,7 +143,7 @@ public class ExchangeTest extends TestBase{
  //   }
 
     @Test
-    @Description("Тест с курсами ЦБ")
+    @Description("РўРµСЃС‚ СЃ РєСѓСЂСЃР°РјРё Р¦Р‘")
     public void getCBRCoursesTest() throws ParseException {
         getResponseWith200Status();
         checkExpectedCurrencies();
@@ -151,23 +151,23 @@ public class ExchangeTest extends TestBase{
 
     }
 
-    @Step("12. Проверить, что АПИ вернуло 200 ОК. 13. Проверить, что заголовок Content-Type соотвествует действительности\n")
+    @Step("12. РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ РђРџР РІРµСЂРЅСѓР»Рѕ 200 РћРљ. 13. РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ Р·Р°РіРѕР»РѕРІРѕРє Content-Type СЃРѕРѕС‚РІРµСЃС‚РІСѓРµС‚ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚Рё\n")
     public void getResponseWith200Status() {
         getWith200Status(CBREndPoints.DAILY_COURSE);
     }
-    @Step("14. Проверить с помощью JSON Schema, что в ответе точно содержатся объекты \"USD\" и \"EUR\"")
+    @Step("14. РџСЂРѕРІРµСЂРёС‚СЊ СЃ РїРѕРјРѕС‰СЊСЋ JSON Schema, С‡С‚Рѕ РІ РѕС‚РІРµС‚Рµ С‚РѕС‡РЅРѕ СЃРѕРґРµСЂР¶Р°С‚СЃСЏ РѕР±СЉРµРєС‚С‹ \"USD\" Рё \"EUR\"")
     public void checkExpectedCurrencies() {
         getWith200Status(CBREndPoints.DAILY_COURSE)
-                .body(matchesJsonSchemaInClasspath("ResponseJSONSchema.json")) //проверяем респонс целиком с помощью json schema
+                .body(matchesJsonSchemaInClasspath("ResponseJSONSchema.json")) //РїСЂРѕРІРµСЂСЏРµРј СЂРµСЃРїРѕРЅСЃ С†РµР»РёРєРѕРј СЃ РїРѕРјРѕС‰СЊСЋ json schema
                 .body("Valute.USD.ID", equalTo("R01235"))
                 .body("Valute.EUR.ID", equalTo("R01239"));
     }
-    @Step("15. Проверить, что \"Date\" отображается завтрашний день, \"Timestamp\" - сегодняшний.")
+    @Step("15. РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ \"Date\" РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ Р·Р°РІС‚СЂР°С€РЅРёР№ РґРµРЅСЊ, \"Timestamp\" - СЃРµРіРѕРґРЅСЏС€РЅРёР№.")
     public void checkDates() {
         String json = getWith200Status(CBREndPoints.DAILY_COURSE).extract().response().getBody().prettyPrint();
         BaseResponse baseResponse = gson.fromJson(json, (Type) BaseResponse.class);
 
-        String responseDate = baseResponse.getDate().substring(0,10); //режем строку, с форматированием SimpleDateFormat с часовым поясом не оч вышло
+        String responseDate = baseResponse.getDate().substring(0,10); //СЂРµР¶РµРј СЃС‚СЂРѕРєСѓ, СЃ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµРј SimpleDateFormat СЃ С‡Р°СЃРѕРІС‹Рј РїРѕСЏСЃРѕРј РЅРµ РѕС‡ РІС‹С€Р»Рѕ
         String responsePreviousDate = baseResponse.getPreviousDate().substring(0,10);
 
         Assert.assertEquals(responseDate, LocalDate.now().toString());
@@ -182,7 +182,7 @@ public class ExchangeTest extends TestBase{
     }
 
 
-//    @Step("Сравниваем курсы на странице с курсами ЦБ")
+//    @Step("РЎСЂР°РІРЅРёРІР°РµРј РєСѓСЂСЃС‹ РЅР° СЃС‚СЂР°РЅРёС†Рµ СЃ РєСѓСЂСЃР°РјРё Р¦Р‘")
 //    public void compareRates() {
 //        ExchangePage exchangePage = new ExchangePage();
 //        int i = 0;

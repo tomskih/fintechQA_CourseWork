@@ -29,9 +29,9 @@ public class ExchangePage extends Page {
 
     public boolean areSelectedCurrenciesDisplayed (String operationCurrenciesAndTypeString, String currency) {
         Map curMap = new HashMap();
-        curMap.put("Евро", "\\u20ac\"");
-        curMap.put("Рубль", "\\u20bd\"");
-        curMap.put("Доллар", "\\u0024\"");
+        curMap.put("Р•РІСЂРѕ", "\\u20ac\"");
+        curMap.put("Р СѓР±Р»СЊ", "\\u20bd\"");
+        curMap.put("Р”РѕР»Р»Р°СЂ", "\\u0024\"");
         System.out.println(operationCurrenciesAndTypeString);
         System.out.println(currency);
 
