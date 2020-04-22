@@ -38,7 +38,6 @@ public class ExchangePage extends Page {
 
     public void getRatesOnPage() {
         int i = 0;
-
         System.out.println(ratesOnPage);
         ArrayList getRatesOnPage = new ArrayList();
 

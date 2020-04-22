@@ -1,6 +1,5 @@
 package uitest;
 
-import apitest.TestBase;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Description;
@@ -14,6 +13,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.IOException;
+
+import static org.apache.http.HttpStatus.SC_OK;
 
 public class ExchangeTest {
     ExchangePage exchangePage = new ExchangePage();
@@ -32,7 +33,7 @@ public class ExchangeTest {
     @Description("Все ui-тесты")
     public void ExchangeTest() throws IOException {
         openPage();
-        isPageLoad();
+ //       isPageLoad();
         isExistsPageElements();
         checkActiveLinkIsHighlighted();
         checkFooterLinks();
@@ -44,28 +45,34 @@ public class ExchangeTest {
     public void openPage() {
         exchangePage.open();
     }
-    @Step ("2. Проверить, что страница действительно загрузилась")
-    public void isPageLoad() throws IOException {
-        TestBase testBase = new TestBase("https://www.tinkoff.ru/about/exchange/");
-        RestAssured.baseURI = "https://www.tinkoff.ru/about/exchange/";
-        testBase.getWith200Status("https://www.tinkoff.ru/about/exchange/");
-    }
+//    @Step ("2. Проверить, что страница действительно загрузилась")
+//    public void isPageLoad() throws IOException {
+//        TestBase testBase = new TestBase("https://www.tinkoff.ru/about/exchange/");
+//        RestAssured.baseURI = "https://www.tinkoff.ru/about/exchange/";
+//        testBase.getWith200Status("https://www.tinkoff.ru/about/exchange/");
+//    }
 
 
 
 
-    @Step ("Проверка наличия элементов на странице")
+    @Step ("3. Проверить, что загрузился хэдер со всеми основными элементами. Здесь же проверить доступность всех ссылок")
     @Description("Проверяем, что есть хедер, лого, ссылки, и проверяем что ссылки рабочие")
     public void isExistsPageElements() {
         int i = 0;
         exchangePage.isExistElement(Page.Header.header);
         exchangePage.isExistElement(Page.Header.logo);
-       /* while (i < header.links.size()) {
-            header.links.get(i).click();
-            Page.Header.header.shouldBe(Condition.exist);
-            exchangePage.back();
+        System.out.println(header.links);
+        while (i < header.links.size()) {
+            RestAssured.when()
+                    .get(header.links.get(i).getAttribute("href"))
+                    .then().assertThat().statusCode(SC_OK);
+
+
+
+          //  Page.Header.header.shouldBe(Condition.exist);
+          //  exchangePage.back();
             i++;
-        }*/
+        }
 
         //????? ??? ?????????? ???????
         //??????????? ? chromedriver ? mouseMove
@@ -74,20 +81,18 @@ public class ExchangeTest {
     }
 
 
-    @Step
-    @DisplayName("Проверяем, что выделена активная ссылка")
-    public void checkActiveLinkIsHighlighted() { //4. ?????????, ??? ??????? ?????? "????? ?????"
+    @Step ("4. Проверить, что выделен раздел 'Курсы валют'")
+    public void checkActiveLinkIsHighlighted() {
         Assert.assertTrue(exchangePage.isActive(header.highlightedLink));
     }
 
-    @Step
-    @DisplayName("Проверяем ссылки в футере")
+    @Step ("5. Проверить, что корректно отображается футер со всеми основными элементами. Здесь же проверить доступность ссылок")
     public void checkFooterLinks() {
         footer.links.get(0).shouldBe(Condition.visible);
         System.out.println(footer.links.size());
     }
 
-    @Step
+    @Step ("6. Проверить, что по умолчанию в селекторах выбора валют выставлены Рубль-->Евро соотвественно, а в таблице курс Евро к Рублю")
     public void checkDefaultCurrencySelect() {
         String LeftSelect = exchangePage.currencySelect.get(0).getText();
         String RightSelect = exchangePage.currencySelect.get(1).getText();
