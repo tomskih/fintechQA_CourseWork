@@ -19,7 +19,7 @@ public class ExchangePage extends Page {
 
     public ElementsCollection operationCurrenciesAndType = $$(By.xpath("//div[@data-qa-file='TableHeader']"));
 
-    public ElementsCollection ratesOnPage = $$(By.xpath("//div[3]/div/div/div[3]/div/div/div[2]/div/div/div[@class='Text__text_primary_28uo7']"));
+    public ElementsCollection ratesOnPage = $$(By.xpath("//div[@class='Text__text_primary_28uo7']"));
 
     @Override
     public Page open(){
@@ -29,9 +29,9 @@ public class ExchangePage extends Page {
 
     public boolean areSelectedCurrenciesDisplayed (String operationCurrenciesAndTypeString, String currency) {
         Map curMap = new HashMap();
-        curMap.put("Р•РІСЂРѕ", "\\u20ac\"");
-        curMap.put("Р СѓР±Р»СЊ", "\\u20bd\"");
-        curMap.put("Р”РѕР»Р»Р°СЂ", "\\u0024\"");
+        curMap.put("Евро", "\\u20ac\"");
+        curMap.put("Рубль", "\\u20bd\"");
+        curMap.put("Доллар", "\\u0024\"");
         System.out.println(operationCurrenciesAndTypeString);
         System.out.println(currency);
 
