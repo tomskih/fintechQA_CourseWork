@@ -17,7 +17,7 @@ public class ExchangePage extends Page {
     public ElementsCollection currencySelect = $$(By.xpath("//div[@data-qa-file='CurrencySelects']"))
             .filterBy(Condition.cssClass("DesktopExchange__controllersCol_QPTtL"));
 
-    public ElementsCollection operationCurrenciesAndType = $$(By.xpath("//div[3]/div/div/div[3]/div/div/div[2]/div/div/div[@data-qa-file='TableHeader']"));
+    public ElementsCollection operationCurrenciesAndType = $$(By.xpath("//div[@data-qa-file='TableHeader']"));
 
     public ElementsCollection ratesOnPage = $$(By.xpath("//div[3]/div/div/div[3]/div/div/div[2]/div/div/div[@class='Text__text_primary_28uo7']"));
 

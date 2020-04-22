@@ -33,10 +33,10 @@ public class ExchangeTest {
     @Description("Все ui-тесты")
     public void ExchangeTest() throws IOException {
         openPage();
- //       isPageLoad();
-        isExistsPageElements();
-        checkActiveLinkIsHighlighted();
-        checkFooterLinks();
+//        isPageLoad();
+//        isExistsPageElements();
+//        checkActiveLinkIsHighlighted();
+     //   checkFooterLinks();
         checkDefaultCurrencySelect();
         checkCurrencyOnPage();
     }
@@ -45,15 +45,12 @@ public class ExchangeTest {
     public void openPage() {
         exchangePage.open();
     }
-//    @Step ("2. Проверить, что страница действительно загрузилась")
-//    public void isPageLoad() throws IOException {
-//        TestBase testBase = new TestBase("https://www.tinkoff.ru/about/exchange/");
-//        RestAssured.baseURI = "https://www.tinkoff.ru/about/exchange/";
-//        testBase.getWith200Status("https://www.tinkoff.ru/about/exchange/");
-//    }
-
-
-
+    @Step ("2. Проверить, что страница действительно загрузилась")
+    public void isPageLoad()  {
+        RestAssured.when()
+                .get(Configuration.baseUrl)
+                .then().assertThat().statusCode(SC_OK);
+    }
 
     @Step ("3. Проверить, что загрузился хэдер со всеми основными элементами. Здесь же проверить доступность всех ссылок")
     @Description("Проверяем, что есть хедер, лого, ссылки, и проверяем что ссылки рабочие")
@@ -61,23 +58,13 @@ public class ExchangeTest {
         int i = 0;
         exchangePage.isExistElement(Page.Header.header);
         exchangePage.isExistElement(Page.Header.logo);
-        System.out.println(header.links);
         while (i < header.links.size()) {
+            String href = header.links.get(i).getAttribute("href");
             RestAssured.when()
-                    .get(header.links.get(i).getAttribute("href"))
+                    .get(href)
                     .then().assertThat().statusCode(SC_OK);
-
-
-
-          //  Page.Header.header.shouldBe(Condition.exist);
-          //  exchangePage.back();
             i++;
         }
-
-        //????? ??? ?????????? ???????
-        //??????????? ? chromedriver ? mouseMove
-        // System.out.println(exchangePage.headerHiddenLinks);
-        // exchangePage.moveToElement(exchangePage.headerAdditionalMenu);
     }
 
 
@@ -88,24 +75,34 @@ public class ExchangeTest {
 
     @Step ("5. Проверить, что корректно отображается футер со всеми основными элементами. Здесь же проверить доступность ссылок")
     public void checkFooterLinks() {
+        int i = 0;
         footer.links.get(0).shouldBe(Condition.visible);
         System.out.println(footer.links.size());
+        while (i < footer.links.size()) {
+            System.out.println(footer.links.get(i).getAttribute("href"));
+            String href = footer.links.get(i).getAttribute("href");
+            RestAssured.when()
+                    .get(href)
+                    .then().assertThat().statusCode(SC_OK);
+            i++;
+        }
     }
 
     @Step ("6. Проверить, что по умолчанию в селекторах выбора валют выставлены Рубль-->Евро соотвественно, а в таблице курс Евро к Рублю")
     public void checkDefaultCurrencySelect() {
         String LeftSelect = exchangePage.currencySelect.get(0).getText();
         String RightSelect = exchangePage.currencySelect.get(1).getText();
-//        String sellRateTitle = exchangePage.operationCurrenciesAndType.get(0).getText();
-//        String buyRateTitle = exchangePage.operationCurrenciesAndType.get(1).getText();
+        System.out.println(exchangePage.operationCurrenciesAndType);
+        String sellRateTitle = exchangePage.operationCurrenciesAndType.get(1).getText();
+        String buyRateTitle = exchangePage.operationCurrenciesAndType.get(2).getText();
 
         Assert.assertEquals(LeftSelect, "Рубль");
         Assert.assertEquals(RightSelect, "Евро");
 
-//        Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(sellRateTitle, LeftSelect));
-//        Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(buyRateTitle, LeftSelect));
-//        Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(sellRateTitle, RightSelect));
-//        Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(buyRateTitle, RightSelect));
+        Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(sellRateTitle, LeftSelect));
+        Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(buyRateTitle, LeftSelect));
+        Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(sellRateTitle, RightSelect));
+        Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(buyRateTitle, RightSelect));
     }
 
     @Step
