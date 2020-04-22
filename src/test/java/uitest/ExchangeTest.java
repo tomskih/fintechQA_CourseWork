@@ -29,8 +29,8 @@ public class ExchangeTest {
     }
 
     @Test
-    @DisplayName("UI-тесты")
-    @Description("Все ui-тесты")
+    @DisplayName("UI-С‚РµСЃС‚С‹")
+    @Description("Р’СЃРµ ui-С‚РµСЃС‚С‹")
     public void ExchangeTest() throws IOException {
         openPage();
 //        isPageLoad();
@@ -41,19 +41,19 @@ public class ExchangeTest {
         checkCurrencyOnPage();
     }
 
-    @Step ("1. Перейти на https://www.tinkoff.ru/about/exchange/ (страница курса валют в tinkoff.ru")
+    @Step ("1. РџРµСЂРµР№С‚Рё РЅР° https://www.tinkoff.ru/about/exchange/ (СЃС‚СЂР°РЅРёС†Р° РєСѓСЂСЃР° РІР°Р»СЋС‚ РІ tinkoff.ru")
     public void openPage() {
         exchangePage.open();
     }
-    @Step ("2. Проверить, что страница действительно загрузилась")
+    @Step ("2. РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ СЃС‚СЂР°РЅРёС†Р° РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ Р·Р°РіСЂСѓР·РёР»Р°СЃСЊ")
     public void isPageLoad()  {
         RestAssured.when()
                 .get(Configuration.baseUrl)
                 .then().assertThat().statusCode(SC_OK);
     }
 
-    @Step ("3. Проверить, что загрузился хэдер со всеми основными элементами. Здесь же проверить доступность всех ссылок")
-    @Description("Проверяем, что есть хедер, лого, ссылки, и проверяем что ссылки рабочие")
+    @Step ("3. РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ Р·Р°РіСЂСѓР·РёР»СЃСЏ С…СЌРґРµСЂ СЃРѕ РІСЃРµРјРё РѕСЃРЅРѕРІРЅС‹РјРё СЌР»РµРјРµРЅС‚Р°РјРё. Р—РґРµСЃСЊ Р¶Рµ РїСЂРѕРІРµСЂРёС‚СЊ РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ РІСЃРµС… СЃСЃС‹Р»РѕРє")
+    @Description("РџСЂРѕРІРµСЂСЏРµРј, С‡С‚Рѕ РµСЃС‚СЊ С…РµРґРµСЂ, Р»РѕРіРѕ, СЃСЃС‹Р»РєРё, Рё РїСЂРѕРІРµСЂСЏРµРј С‡С‚Рѕ СЃСЃС‹Р»РєРё СЂР°Р±РѕС‡РёРµ")
     public void isExistsPageElements() {
         int i = 0;
         exchangePage.isExistElement(Page.Header.header);
@@ -68,12 +68,12 @@ public class ExchangeTest {
     }
 
 
-    @Step ("4. Проверить, что выделен раздел 'Курсы валют'")
+    @Step ("4. РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ РІС‹РґРµР»РµРЅ СЂР°Р·РґРµР» 'РљСѓСЂСЃС‹ РІР°Р»СЋС‚'")
     public void checkActiveLinkIsHighlighted() {
         Assert.assertTrue(exchangePage.isActive(header.highlightedLink));
     }
 
-    @Step ("5. Проверить, что корректно отображается футер со всеми основными элементами. Здесь же проверить доступность ссылок")
+    @Step ("5. РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ РєРѕСЂСЂРµРєС‚РЅРѕ РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ С„СѓС‚РµСЂ СЃРѕ РІСЃРµРјРё РѕСЃРЅРѕРІРЅС‹РјРё СЌР»РµРјРµРЅС‚Р°РјРё. Р—РґРµСЃСЊ Р¶Рµ РїСЂРѕРІРµСЂРёС‚СЊ РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ СЃСЃС‹Р»РѕРє")
     public void checkFooterLinks() {
         int i = 0;
         footer.links.get(0).shouldBe(Condition.visible);
@@ -88,16 +88,15 @@ public class ExchangeTest {
         }
     }
 
-    @Step ("6. Проверить, что по умолчанию в селекторах выбора валют выставлены Рубль-->Евро соотвественно, а в таблице курс Евро к Рублю")
+    @Step ("6. РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РІ СЃРµР»РµРєС‚РѕСЂР°С… РІС‹Р±РѕСЂР° РІР°Р»СЋС‚ РІС‹СЃС‚Р°РІР»РµРЅС‹ Р СѓР±Р»СЊ-->Р•РІСЂРѕ СЃРѕРѕС‚РІРµСЃС‚РІРµРЅРЅРѕ, Р° РІ С‚Р°Р±Р»РёС†Рµ РєСѓСЂСЃ Р•РІСЂРѕ Рє Р СѓР±Р»СЋ")
     public void checkDefaultCurrencySelect() {
         String LeftSelect = exchangePage.currencySelect.get(0).getText();
         String RightSelect = exchangePage.currencySelect.get(1).getText();
-        System.out.println(exchangePage.operationCurrenciesAndType);
         String sellRateTitle = exchangePage.operationCurrenciesAndType.get(1).getText();
         String buyRateTitle = exchangePage.operationCurrenciesAndType.get(2).getText();
 
-        Assert.assertEquals(LeftSelect, "Рубль");
-        Assert.assertEquals(RightSelect, "Евро");
+        Assert.assertEquals(LeftSelect, "Р СѓР±Р»СЊ");
+        Assert.assertEquals(RightSelect, "Р•РІСЂРѕ");
 
         Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(sellRateTitle, LeftSelect));
         Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(buyRateTitle, LeftSelect));

@@ -32,6 +32,8 @@ public class ExchangePage extends Page {
         curMap.put("Евро", "\\u20ac\"");
         curMap.put("Рубль", "\\u20bd\"");
         curMap.put("Доллар", "\\u0024\"");
+        System.out.println(operationCurrenciesAndTypeString);
+        System.out.println(currency);
 
         return operationCurrenciesAndTypeString.contains(curMap.get(currency).toString());
     }
