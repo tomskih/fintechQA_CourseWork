@@ -51,11 +51,11 @@ public class ExchangeTest extends TestBase{
     @Description("Все ui-тесты")
     public void ExchangeTest() throws IOException {
         openPage();
-//        isPageLoad();
-//        isExistsPageElements();
-//        checkActiveLinkIsHighlighted();
-     //   checkFooterLinks();
-      //  checkDefaultCurrencySelect();
+        isPageLoad();
+        isExistsPageElements();
+        checkActiveLinkIsHighlighted();
+        checkFooterLinks();
+        checkDefaultCurrencySelect();
         checkCurrencyOnPage();
     }
 
