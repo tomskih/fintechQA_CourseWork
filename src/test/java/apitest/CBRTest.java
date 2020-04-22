@@ -54,8 +54,8 @@ public class CBRTest extends TestBase {
         String responseDate = baseResponse.getDate().substring(0,10); //режем строку, с форматированием SimpleDateFormat с часовым поясом не оч вышло
         String responsePreviousDate = baseResponse.getPreviousDate().substring(0,10); //todo переделать на даты
 
-        Assert.assertEquals(responseDate, LocalDate.now().minusDays(1).toString());
-        Assert.assertEquals(responsePreviousDate, LocalDate.now().minusDays(2).toString());
+        Assert.assertEquals(responseDate, LocalDate.now().toString());
+        Assert.assertEquals(responsePreviousDate, LocalDate.now().minusDays(1).toString());
 
         Double courseUSD = baseResponse.getValute().getUSD().getValue();
         Double courseEUR = baseResponse.getValute().getEUR().getValue();

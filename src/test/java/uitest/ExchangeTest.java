@@ -2,6 +2,8 @@ package uitest;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import models.ui.pages.ExchangePage;
 import models.ui.pages.Page;
 import org.junit.Assert;
@@ -23,6 +25,8 @@ public class ExchangeTest {
     }
 
     @Test
+    @DisplayName("Проверка наличия элементов на странице")
+    @Description("This is an example test suite")
     public void isExistsPageElements() {
         int i = 0;
         exchangePage.isExistElement(Page.Header.header);
@@ -58,8 +62,8 @@ public class ExchangeTest {
         String sellRateTitle = exchangePage.operationCurrenciesAndType.get(0).getText();
         String buyRateTitle = exchangePage.operationCurrenciesAndType.get(1).getText();
 
-        Assert.assertEquals(LeftSelect, "Р СѓР±Р»СЊ");
-        Assert.assertEquals(RightSelect, "Р•РІСЂРѕ");
+        Assert.assertEquals(LeftSelect, "Рубль");
+        Assert.assertEquals(RightSelect, "Евро");
 
         Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(sellRateTitle, LeftSelect));
         Assert.assertTrue(exchangePage.areSelectedCurrenciesDisplayed(buyRateTitle, LeftSelect));
