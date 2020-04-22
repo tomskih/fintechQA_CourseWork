@@ -12,7 +12,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 public abstract class Page {
 
     public static class Header {
-        public static SelenideElement header = Selenide.$(By.xpath("//div[@data-block-type='headerSlim']"));
+        public static SelenideElement header = Selenide.$(By.xpath("//div[@data-qa-file='htmlToReactElementWithInnerHtml']"));
         public static SelenideElement logo = header.$(By.xpath("./div/div/a[@href='/']"));
         public ElementsCollection links= header.$$(By.tagName("a")).filterBy(Condition.visible);
         public ElementsCollection hiddenLinks= header.$$(By.tagName("a")).filterBy(Condition.not(Condition.visible));

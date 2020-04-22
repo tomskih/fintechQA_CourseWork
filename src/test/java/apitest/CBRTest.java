@@ -27,7 +27,7 @@ public class CBRTest extends TestBase {
     }
 
     @Test
-    @Description("РўРµСЃС‚ СЃ РєСѓСЂСЃР°РјРё Р¦Р‘")
+    @Description("Тест с курсами ЦБ")
     public void getCBRCoursesTest() throws ParseException {
         getResponseWith200Status();
         checkExpectedCurrencies();
@@ -35,24 +35,24 @@ public class CBRTest extends TestBase {
 
     }
 
-    @Step("РџСЂРѕРІРµСЂСЏРµРј СЃС‚Р°С‚СѓСЃ 200, Р·Р°РіРѕР»РѕРІРѕРє РєРѕРЅС‚РµРЅС‚ С‚Р°Р№Рї")
+    @Step("Проверяем статус 200, заголовок контент тайп")
     public void getResponseWith200Status() {
         getWith200Status(CBREndPoints.DAILY_COURSE);
     }
-    @Step("РџСЂРѕРІРµСЂСЏРµРј, С‡С‚Рѕ РІ РѕС‚РІРµС‚Рµ С‚РѕС‡РЅРѕ РµСЃС‚СЊ USD Рё EUR")
+    @Step("Проверяем, что в ответе точно есть USD и EUR")
     public void checkExpectedCurrencies() {
         getWith200Status(CBREndPoints.DAILY_COURSE)
-                .body(matchesJsonSchemaInClasspath("ResponseJSONSchema.json")) //РїСЂРѕРІРµСЂСЏРµРј СЂРµСЃРїРѕРЅСЃ С†РµР»РёРєРѕРј СЃ РїРѕРјРѕС‰СЊСЋ json schema
+                .body(matchesJsonSchemaInClasspath("ResponseJSONSchema.json")) //проверяем респонс целиком с помощью json schema
                 .body("Valute.USD.ID", equalTo("R01235"))
                 .body("Valute.EUR.ID", equalTo("R01239"));
     }
-    @Step("РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ Date РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ Р·Р°РІС‚СЂР°С€РЅРёР№ РґРµРЅСЊ, Timestamp - СЃРµРіРѕРґРЅСЏС€РЅРёР№.")
+    @Step("Проверить, что Date отображается завтрашний день, Timestamp - сегодняшний.")
     public void checkDates() {
         String json = getWith200Status(CBREndPoints.DAILY_COURSE).extract().response().getBody().prettyPrint();
         BaseResponse baseResponse = gson.fromJson(json, (Type) BaseResponse.class);
 
-        String responseDate = baseResponse.getDate().substring(0,10); //СЂРµР¶РµРј СЃС‚СЂРѕРєСѓ, СЃ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµРј SimpleDateFormat СЃ С‡Р°СЃРѕРІС‹Рј РїРѕСЏСЃРѕРј РЅРµ РѕС‡ РІС‹С€Р»Рѕ
-        String responsePreviousDate = baseResponse.getPreviousDate().substring(0,10); //todo РїРµСЂРµРґРµР»Р°С‚СЊ РЅР° РґР°С‚С‹
+        String responseDate = baseResponse.getDate().substring(0,10); //режем строку, с форматированием SimpleDateFormat с часовым поясом не оч вышло
+        String responsePreviousDate = baseResponse.getPreviousDate().substring(0,10); //todo переделать на даты
 
         Assert.assertEquals(responseDate, LocalDate.now().toString());
         Assert.assertEquals(responsePreviousDate, LocalDate.now().minusDays(1).toString());
@@ -67,7 +67,7 @@ public class CBRTest extends TestBase {
         // Date parsedDate = dateFormat.parse(responseDate);
     }
 
-//    @Step("РЎСЂР°РІРЅРёРІР°РµРј РєСѓСЂСЃС‹ РЅР° СЃС‚СЂР°РЅРёС†Рµ СЃ РєСѓСЂСЃР°РјРё Р¦Р‘")
+//    @Step("Сравниваем курсы на странице с курсами ЦБ")
 //    public void compareRates() {
 //        ExchangePage exchangePage = new ExchangePage();
 //        int i = 0;

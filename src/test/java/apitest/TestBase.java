@@ -28,7 +28,7 @@ public class TestBase {
                 .contentType(ContentType.JSON);
     }
 
-    protected ValidatableResponse getWith200Status(String endPoint) {
+    public  ValidatableResponse getWith200Status(String endPoint) {
         return requestSpecification
                 .get(endPoint)
                 .then()
